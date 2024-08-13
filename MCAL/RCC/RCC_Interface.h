@@ -34,25 +34,23 @@ typedef enum {
 } Peripheral_t;
 
 /**
- * Choose system clock.
- * Choose Buses pre-scale.
+ * @brief: Initialize RCC driver.
+ * @return: None.
  * */
 void RCC_init(void);
 
 
 /**
- * Enable peripherals clock.
- *
- * Args:
- *     peripheral(Peripheral_t): Peripheral name to enable.
+ * @brief: Enable peripherals clock.
+ * @param peripheral: Value of Peripheral_t name to enable.
+ * @return None.
  * */
 void RCC_peripheralEnable(Peripheral_t peripheral);
 
 /**
- * Disable peripherals clock.
- *
- * Args:
- *     peripheral(Peripheral_t): Peripheral name to disable.
+ * @brief: Disable peripherals clock.
+ * @param peripheral: Value of Peripheral_t name to disable.
+ * @return None.
  * */
 void RCC_peripheralDisable(Peripheral_t peripheral);
 

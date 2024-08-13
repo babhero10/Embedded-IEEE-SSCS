@@ -13,7 +13,6 @@
 #define RCC_HSE 1
 #define RCC_PLL 2
 
-
 /* PLL multipliers */
 #define PLL_MULTIPLIER_X_2  0b0000
 #define PLL_MULTIPLIER_X_3  0b0001
@@ -71,7 +70,7 @@
 
 /************ USER CONFIGURATIONS ************/
 /* Choose system clock*/
-#define SYSTEM_CLOCK  RCC_PLL
+#define SYSTEM_CLOCK  RCC_HSI
 
 /** Choosing HSE type.
  * 0: oscillator.
@@ -96,9 +95,6 @@
  * 1: PLL clock is not divided.
  * */
 #define USB_PRE_SCALER 0
-
-
-#define SYSTEM_CLOCK      RCC_PLL
 
 #define PLL_MULTIPLIER    PLL_MULTIPLIER_X_2
 

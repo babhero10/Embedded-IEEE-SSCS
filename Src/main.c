@@ -18,15 +18,27 @@
 
 #include <stdint.h>
 #include "../MCAL/RCC/RCC_Interface.h"
+#include "../ECUAL/LED/LED_Interface.h"
 
+#include "../MCAL/GPIO/GPIO_Interface.h"
 int main(void)
 {
     RCC_init();
-
     RCC_peripheralEnable(RCC_GPIOA_EN);
 
-    while (1)
-    {
+
+    // Initialize GPIO pin PA0 as output
+    GPIO_Config_t ledConfig;
+    ledConfig.pin.port = PORTA;
+    ledConfig.pin.pinNumber = 0;
+    ledConfig.mode = GPIO_MODE_OUTPUT_PUSHPULL;
+    ledConfig.speed = GPIO_SPEED_2MHZ;
+
+    GPIO_init(&ledConfig);
+
+    while (1) {
+        // Toggle PA0
+        GPIO_WritePin(&ledConfig.pin, 1);
 
     }
 }

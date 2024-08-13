@@ -8,6 +8,8 @@
 #ifndef STD_TYPES_H_
 #define STD_TYPES_H_
 
+#include "stdlib.h"
+
 typedef unsigned char U8;
 typedef signed char S8;
 
